@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.practice002.entities">
+  <ClassDiagramComponents>
+    <Class name="Player" package="practice002.entities" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="lastname" type="String" visibility="private"/>
+        <Field name="position" type="int" visibility="private"/>
+        <Field name="number" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="lastname"/>
+          <Argument type="int" name="position"/>
+          <Argument type="int" name="number"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getLastname" returnType="String" visibility="public"/>
+        <Method name="setLastname" returnType="void" visibility="public">
+          <Argument type="String" name="lastname"/>
+        </Method>
+        <Method name="getPosition" returnType="int" visibility="public"/>
+        <Method name="setPosition" returnType="void" visibility="public">
+          <Argument type="int" name="position"/>
+        </Method>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="int" name="number"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Team" package="practice002.entities" visibility="public" xPosition="499.0" yPosition="106.0">
+      <Fields>
+        <Field name="players" type="ArrayList&lt;Player&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Player&gt;" name="players"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPlayers" returnType="ArrayList&lt;Player&gt;" visibility="public"/>
+        <Method name="setPlayers" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Player&gt;" name="players"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="players" source="practice002.entities.Team" target="practice002.entities.Player" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Player&gt;"/>
+    <UseRelation source="practice002.entities.Team" target="practice002.entities.Player" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
